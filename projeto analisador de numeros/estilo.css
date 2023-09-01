@@ -1,0 +1,34 @@
+body {
+    background: rgb(185, 187, 75);
+    font: normal 15pt Arial;
+    
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.815);
+    border-radius: 5px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.356);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+select {
+    width: 150px;
+    border-radius: 10px;
+}
+
+input#txtn {
+    border-radius: 10px;
+}

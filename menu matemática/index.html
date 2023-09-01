@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,300;1,200&display=swap');
+        body {
+            background-image: linear-gradient(to left, rgb(197, 135, 84), rgb(212, 179, 141), rgb(241, 231, 226));
+            margin-top: 50px;
+            font-size: 1.7em;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.247);
+        }
+
+        #numeros {
+            text-align: center;
+        }
+
+        #numeros > p > input  {
+            border: none;
+            height: 25px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.13);
+        }
+
+        main {
+            margin: auto;
+            max-width: 500px;
+            background-color: rgba(103, 180, 180, 0);
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.342);
+        }
+        #botao {
+            text-align: center;
+            margin: 10px;
+        }
+
+        #botao > input {
+            height: 40px;
+            border-radius: 10px;
+            border-style: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.342);
+        }
+
+        #res {
+            font-size: 1.8em;
+            text-align: center;
+            color: azure;
+        }
+
+        #numero1 {
+            font-size: 20px;
+        }
+
+        #numero2 {
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div id="numeros">
+            <p>Primeiro Valor: <input type="number" name="numero1" id="numero1"></p>
+            <p>Segundo Valor: <input type="number" name="numero2" id="numero2"></p>
+        </div>
+        <fieldset id="radio">
+            <legend>Qual sua opçao?</legend>
+            <input type="radio" name="opçao" id="somar" checked > <label for="somar">Somar</label> <br>
+
+            <input type="radio" name="opçao" id="multiplicar"> <label for="multiplicar">Multiplicar</label> <br>
+
+            <input type="radio" name="opçao" id="divisao">  <label for="divisao">Divisão</label>  <br>
+
+            <input type="radio" name="opçao" id="maior"> <label for="maior">Maior</label> 
+        </fieldset>
+        <div id="botao">
+            <input type="button" value="resultado" onclick="gerar()">
+        </div>
+        <div id="res">
+
+        </div>
+    </main>
+
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

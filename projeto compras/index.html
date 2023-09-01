@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOJÃO</title>
+
+    <style>
+        .parcelas {
+            display: none;
+        }
+        #tresvezes:checked ~ .parcelas{
+            display: block;
+         }
+
+    </style>
+</head>
+<body>
+    <h1>Loja</h1>
+
+    <div>
+        Total do Valor: <input type="number" name="valor" id="valor">
+    </div>
+    <br>
+
+    <fieldset>
+        <legend>Formas de Pagamento</legend>
+
+        <input type="radio" name="pagamento" id="dinheiro" checked>
+        <label for="dinheiro">á vista em dinheiro (10% de desconto)</label>
+        <br>
+
+        <input type="radio" name="pagamento" id="cartao">
+        <label for="cartao">á vista no cartão (5% de desconto)</label>
+        <br>
+
+        <input type="radio" name="pagamento" id="duasvezes">
+        <label for="duasvezes">2x no cartão débito sem juros</label>
+        <br>
+
+        <input type="radio" name="pagamento" id="tresvezes">
+        <label for="tresvezes">3x ou mais no cartão crédito (possui 20% de juros até 5x...6x pra cima o juros é de 30%)</label>
+        <br>
+        
+        <label for="parcelas" class="parcelas">Quantas parcelas? (até 12x)</label>
+        <input type="number" name="parcelas" class="parcelas"
+        id="juros">
+            
+    </fieldset>
+    <br>
+
+    <div id="botao">
+        <input type="button" value="Calcular" onclick="Calcular()">
+    </div>
+
+    <div id="res">
+
+    </div>
+    <br>
+    <div id="res2">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
