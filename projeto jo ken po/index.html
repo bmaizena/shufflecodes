@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokenPo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,300;1,200&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3em;
+            background-color: azure;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        main {
+            background-color: rgba(220, 220, 220, 0.192);
+            width: 320px;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.164);
+        }
+
+        #botaoJogar {
+            width: 200px;
+            height: 30px;
+            font-size: 1em;
+            background-color: rgb(153, 238, 136);
+            border-radius: 3px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.164);
+            cursor: pointer;
+            border-style: none;
+        }
+
+        #num {
+            width: 50px;
+        }
+
+        #btjogar {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>JoKeNPo</h1>
+    <main>
+        <div>
+            <p>
+                SUAS OPÇÕES: <br>
+                [1] PEDRA <br>
+                [2] PAPEL <br>
+                [3] TESOURA
+            </p>
+            <br>
+            Qual Sua Jogada? <input type="number" name="num" id="num">
+        </div>
+        <br>
+        <div id="btjogar">
+            <input type="button" value="Jogar" id="botaoJogar" onclick="Gerar()">
+        </div>
+        <br>
+        <div id="computador">
+
+        </div>
+        <br>
+        <div id="eu">
+
+        </div>
+        <br>
+        <div id="res">
+
+        </div>
+    </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
