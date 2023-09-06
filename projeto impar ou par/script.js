@@ -6,7 +6,7 @@ resimp = document.getElementById('resimp')
 
 function gerar(){
     n = Number(document.getElementById('num').value)
-    pcramd = Math.floor(Math.random()* 10);
+    pcramd = Math.floor(Math.random()* 11);
     soma = n + pcramd
     tot = 0
     if (n < 0 || n > 10 || imPar.value != 'p' && imPar.value != 'P' && imPar.value != 'i' && imPar.value != 'I') {
