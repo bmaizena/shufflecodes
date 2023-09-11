@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Fatorial</title>
+</head>
+<body>
+    <h1>Fatorial</h1>
+    <div>
+        <p>Número:  
+            <input type="number" name="num" id="num">
+        </p>
+        <input type="button" value="Fatorar" onclick="Fatorial()">
+    </div>
+    <div id="res">
+
+    </div>
+
+    <script>
+        function Fatorial(n) {
+            res.innerHTML =''
+            n = Number(document.getElementById('num').value)
+            fat = 1
+            p = 1
+            for (c = n; c > p; c--) {
+                fat*= c
+                res.innerHTML += `${c} x `
+            }
+            res.innerHTML += `1 = ${fat}`        
+        }
+    </script>
+</body>
+</html>
