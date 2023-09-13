@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pesagem</title>
+</head>
+<body>
+    <h1>Pesagem</h1>
+    <div>
+        <p>
+            Nome: <input type="text" name="name" id="nameid">
+        </p>
+        <p>
+            Peso kg: <input type="number" name="peso" id="pesoid">
+        </p>
+        <input type="button" value="Adicionar" onclick="Adicionar()">
+        <br>
+        <select name="lista" id="listaid" size="6"></select>
+        <br>
+        <input type="button" value="Finalizar" onclick="Finalizar()">
+    </div>
+    <div>
+
+    <div id="res">
+
+    <script>
+        nome = document.getElementById('nameid')
+        peso = document.getElementById('pesoid')
+        res = document.getElementById('res')
+        lista = document.getElementById('listaid')
+        dados = []
+        
+
+        function Adicionar() {
+            dados.push(nome)
+            dados.push(peso)
+            item = document.createElement('option')
+            item.text = `nome: ${nome.value}  peso:${Number(peso.value)}kg adicionado`
+            lista.appendChild(item)
+
+        }
+
+        function Finalizar() {
+            res.innerHTML += `Foram cadastradas ${dados.length / 2 } pessoas <br>`
+            
+        }
+
+
+    </script>
+</body>
+</html>
