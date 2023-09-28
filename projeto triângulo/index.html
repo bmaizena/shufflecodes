@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triângulo</title>
+    <style>
+        h1, h2 {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+        }
+        img {
+            margin: auto;
+            width: 400px;
+            padding: 10px;
+        }
+        main {
+            border: solid 1px black;
+            margin: auto;
+            width: 500px;
+            padding: 10px;
+        }
+        #calc {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual Triângulo</h1>
+    <main>
+        <h2>Vamos definir a medida de cada lado do Triângulo</h2>
+        <div>
+            <p>Primeiro lado: <input type="number" name="lado1" id="lado1"></p>
+            <p>Segundo lado: <input type="number" name="lado2" id="lado2"></p>
+            <p>Terceiro lado: <input type="number" name="lado3" id="lado3"></p>
+            <input type="button" value="Calcular" id="calc" onclick="Calcular()">
+        </div>
+        <div id="res">
+        
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
