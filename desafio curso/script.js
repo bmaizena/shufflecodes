@@ -6,10 +6,10 @@ function Gerar() {
 
     numeroPaginas = numRegistro.value / regPagina.value
     
-   
     
-    if (numeroPaginas == parseFloat(numeroPaginas)) {
-        numeroPaginas = (numeroPaginas.toFixed()) + 1
+    
+    if (numeroPaginas % 2 == 0) {
+        numeroPaginas += 1
         totNumPagina.innerHTML = `Total de Páginas: ${numeroPaginas}`
         
     }
