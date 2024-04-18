@@ -4,32 +4,25 @@ pagSelecionada = document.getElementById('pagSelecionada')
 
 function Gerar() {
 
-    numeroPaginas = numRegistro.value / regPagina.value
+    numeroPaginas = Math.ceil(numRegistro.value / regPagina.value)
     
-    
-    
-    if (numeroPaginas % 2 == 0) {
-        numeroPaginas += 1
-        totNumPagina.innerHTML = `Total de Páginas: ${numeroPaginas}`
-        
-    }
+    pagina = 1
 
+    inicio = (pagina * regPagina.value) - regPagina.value
+
+    if (pagSelecionada.value > numeroPaginas)
+        window.alert('pagina selecionada inválida')
     else {
-        
-        totNumPagina.innerHTML = `Total de Páginasss: ${numeroPaginas}`
+        regPagSelecionada.innerHTML += `Página Selecionada: ${pagSelecionada.value}`
+        totNumPagina.innerHTML += `Total de Páginas: ${numeroPaginas}`
+        totRegistro.innerHTML += `Total de Registro: ${numRegistro.value}`
+        totRegPagina.innerHTML += `Registro por Página: ${regPagina.value}`
+        pagIni.innerHTML += `Pagina Inicial: ${inicio+1}`
+        pagFinal.innerHTML += `Pagina Final: ${numeroPaginas}`
+
+    
     }
-
     
-
-
-
-
-
-
-    
-    totRegistro.innerHTML += `Total de Registro: ${numRegistro.value}`
-    totRegPagina.innerHTML += `Registro por Página: ${regPagina.value}`
-    regPagSelecionada.innerHTML += `Página Selecionada: ${pagSelecionada.value}`
 
 
 
