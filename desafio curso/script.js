@@ -3,7 +3,7 @@ regPagina = document.getElementById('regPagina')
 pagSelecionada = document.getElementById('pagSelecionada')
 
 function Gerar() {
-
+    
     numeroPaginas = Math.ceil(numRegistro.value / regPagina.value)
     
     pagina = 1
