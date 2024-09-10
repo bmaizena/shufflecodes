@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Página Inicial - Projeto de TCC</title>
+    <link rel="stylesheet" href="styleTCC.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Projeto TCC</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#historia">História do Tema</a></li>
+                <li><a href="#ideia">Como Surgiu a Ideia</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <section id="home" class="hero">
+            <h1>Bem-vindo ao Projeto de TCC</h1>
+            <p>Explore nossa jornada e saiba mais sobre o desenvolvimento deste projeto.</p>
+        </section>
+    </header>
+
+    <main>
+        <section id="historia" class="content">
+            <h2>História do Tema</h2>
+            <p>O tema do projeto de TCC foi desenvolvido a partir de uma profunda pesquisa sobre ...</p>
+        </section>
+
+        <section id="ideia" class="content">
+            <h2>Como Surgiu a Ideia</h2>
+            <p>A ideia do projeto surgiu quando identificamos a necessidade de ...</p>
+        </section>
+
+        <section id="contato" class="content contact">
+            <h2>Contato</h2>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Projeto de TCC. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
