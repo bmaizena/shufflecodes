@@ -1,149 +1,140 @@
-/* CSS básico para o layout */
+/* Estilos básicos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
 }
 
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Estilo para o cabeçalho e navegação */
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #333;
     padding: 1rem 0;
-    text-align: center;
-    position: relative;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-nav .logo h1 {
-    font-size: 1.5rem;
-}
-
-nav .menu {
-    display: flex;
+nav ul {
     list-style: none;
-    gap: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-nav .menu li a {
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
-nav .menu li a:hover {
-    text-decoration: underline;
+nav ul li a:hover {
+    color: #f0a500;
 }
 
+/* Estilo da seção principal (hero) */
 .hero {
-    padding: 50px 20px;
-    background: url('background.jpg') no-repeat center center/cover;
-    color: white;
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
 }
 
 .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
 }
 
-.hero p {
-    font-size: 1.2rem;
+.hero h2 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 30px;
 }
 
-/* Estilo do botão hambúrguer */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    border-radius: 2px;
-}
-
-main {
-    padding: 20px;
-}
-
-.content {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: white;
+.hero img {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+/* Seção de Funções */
+.features {
+    background-color: #fff;
+    padding: 40px 0;
 }
 
-.contact input,
-.contact textarea {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.contact button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-footer {
+.features h3 {
     text-align: center;
-    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 30%;
+}
+
+.feature-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.feature-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Seção de Contato */
+.contact {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+}
+
+.contact h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.contact a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #f0a500;
+}
+
+/* Rodapé */
+footer {
     background-color: #333;
     color: white;
+    text-align: center;
+    padding: 10px 0;
     margin-top: 20px;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    nav .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #4CAF50;
-    }
-
-    nav .menu.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .content h2 {
-        font-size: 1.5rem;
-    }
 }
