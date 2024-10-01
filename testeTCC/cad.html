@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        body{
+            margin:0;
+            padding: 0;
+            font-family: "Montserrat", sans-serif;
+        }
+        @media screen and (min-width: 0px) and (max-width:650px) {
+    #mainCad{
+        width: 450px;
+        height: 79vh;
+      
+        
+    }
+
+    #formulario {
+        height: 60%;
+        width: 100%;
+        margin-top: 301px;
+        transition: width 0.1s, height 0.2s;
+        transition-timing-function: ease-in-out;
+    }
+    #imagem{
+        width: 385px;
+        transition: width 0.2s, height 0.2s;
+        transition-timing-function: ease-in-out;
+        
+    }
+    
+}
+
+@media screen and (min-width: 651px) and (max-width:1920px) {
+    #mainCad{
+        min-width: 900px;
+        transition: width 0.3s, height 0.3s;
+        transition-timing-function: ease-in-out;
+    }
+    
+}
+
+        
+    </style>
+    
+</head>
+<body class="bg-zinc-300 grid justify-items-center">
+
+
+<main id="mainCad" class=" bg-gradient-to-r from-blue-950 to-blue-700 grid justify-items-end rounded-2xl shadow-2xl relative border border-slate-50 mt-9">
+    <div class="absolute top-6 left-8 ">
+        <h1 class="font-thin text-6xl text-slate-50 ml-3">BUS.IO</h1>
+        <p class="font-thin text-lg text-slate-50 ml-1">Seu ônibus na palma da sua mão</p>
+    </div>
+    <div id="imagem"class="absolute top-12 left-12">
+        <img src="bus.io.png" alt="bus" class="w-10/12 ml-1 mt-2">
+    </div>
+    
+
+    <form id="formulario"action="/cadastros/recCadastro" method="POST" class=" flex flex-col bg-slate-50 p-5 rounded-2xl shadow-md w-7/12 ml-4 ">
+        
+        <h2 class="text-2xl font-bold font-mono text-center mb-4">Cadastre-se</h2>
+
+        <input type="text" name="nome" id="nome" placeholder="Nome Completo" class="m-1 p-1 rounded-lg border border-zinc-500 w-4/6 self-center">
+    
+    
+        <input type="date" name="dt_nasc" id="dt_nasc" placeholder="Data de Nascimento" class="m-1 p-1 rounded-lg border border-zinc-500 w-4/6 self-center">
+    
+    
+        <input type="text" name="email" id="email" placeholder="Email" class="m-1 p-1 rounded-lg border border-zinc-500 w-4/6 self-center">
+    
+    
+        <input type="text" name="telefone" id="telefone" placeholder="Telefone" class="m-1 p-1 rounded-lg border border-zinc-500 w-4/6 self-center">
+    
+    
+        <input type="text" name="endereco" id="endereco" placeholder="Endereço" class="m-1 p-1 rounded-lg border border-zinc-500 w-4/6 self-center">
+    
+    
+        <input type="text" name="cpf" id="cpf" placeholder="CPF" class="m-1 p-1 rounded-lg border border-zinc-500 w-4/6 self-center">
+    
+    
+        <input type="password" name="senha" id="senha" placeholder="Senha" class="m-1 p-1 rounded-lg border border-zinc-500 w-4/6 self-center">
+    
+    
+        <input type="Submit" value="Cadastrar" class="border border-zinc-800 shadow-md rounded-lg p-1 mb-0 m-1 cursor-pointer bg-gradient-to-r from-blue-400 to-cyan-400 hover:from-cyan-400 hover:to-blue-400  hover:text-slate-50 transition duration-300 delay-150 hover:delay-300 w-1/2 self-center" >
+        <p class="self-center">ja tem uma conta? <a href="index.html" class=" hover:text-cyan-500"><b>Entrar</b></a></p> 
+        <br>
+        <p class="self-center pb-2 hover:text-cyan-500"><a href="index.html"><b>Página Inicial</b></a></p>
+
+        
+
+    </form>
+</main>
+
+<br>
+
+
+</body>
+</html>
