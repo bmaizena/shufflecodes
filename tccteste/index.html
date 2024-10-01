@@ -8,223 +8,226 @@
     <title>Document</title>
    
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Montserrat", sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-
-}
-
-header {
-    color: white;
-    padding: 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
-}
-
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    
-}
-
-
-.hero {
-    padding: 50px 20px;
-    color: white;
-  
-}
-
-#home {
-    background: url('bus-img-1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center ;
- 
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-shadow: black 1px 0 20px;
-    
-    
-}
-
-.hero p {
-    font-size: 1.2rem;
-    text-shadow: black 1px 0 20px;
-}
-
-main {
-    padding: 20px;
-    margin: auto;
-    width: 60%;
-}
-
-.content {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
-}
-
-
-.content h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
-    text-align: center;
-}
-
-.content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    
-}
-
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    margin-top: 20px;
-
-}
-#menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-#hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-#importancia {
-    background: url('bus-img-2.jpg') ;
-    background-position: center right;
-    background-size: cover;
-    background-attachment: fixed;
-    text-align: center;
-}
-
-#importancia p  {
-    display: inline-block;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.414);
-    text-shadow: 1px 1px 0px black;
-    color: white;
-    border-radius: 10px;
-}
-
-#importancia h2  {
-    display: inline-block;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.414);
-    text-shadow: 1px 1px 0px black;
-    color: white;
-    border-radius: 10px;
-}
-
-
-.accordion-item {
-    margin-bottom: 10px;
-}
-.accordion-header {
-    background-image: linear-gradient(to right, rgb(37,99,235), rgb(59,130,246));
-    color: white;
-    padding: 15px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.accordion-header:hover {
-    background-image: linear-gradient(to right, rgb(59,130,246), rgb(37,99,235));
-}
-.accordion-content {
-    padding: 15px;
-    background-color: #f8f9fa;
-    display: none;
-    border-left: 2px solid #007bff;
-    border-right: 2px solid #007bff;
-    border-bottom: 2px solid #007bff;
-}
-.icon {
-    font-size: 1.5rem;
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-    
-    main{
-        margin: auto;
-        width: 90%;
-    }
+        body {
+            font-family: "Montserrat", sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
 
-    header{
-        text-align: center;
-    }
+        }
+
+        header {
+            color: white;
+            padding: 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+        }
 
 
-    .hero h1 {
-        font-size: 2rem;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-    .content {
-        margin-bottom: 20px;
-    }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            
+        }
 
-    .content h2 {
-        font-size: 1.5rem;
-    }
 
-    
-    #menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 20px;
-    }
+        .hero {
+            padding: 50px 20px;
+            color: white;
+        
+        }
 
-    #menu.active {
-        display: flex;
-    }
-    #hamburger {
-        display: block;
-    }
-}
+        #home {
+            background: url('bus-img-1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center ;
+        
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: black 1px 0 20px;
+            
+            
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            text-shadow: black 1px 0 20px;
+        }
+
+        main {
+            padding: 20px;
+            margin: auto;
+            width: 60%;
+        }
+
+        .content {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+        }
+
+
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+
+        }
+        #menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        #hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        #importancia {
+            background: url('bus-img-2.jpg') ;
+            background-position: center right;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+        }
+
+        #importancia p  {
+            display: inline-block;
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.414);
+            text-shadow: 1px 1px 0px black;
+            color: white;
+            border-radius: 10px;
+        }
+
+        #importancia h2  {
+            display: inline-block;
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.414);
+            text-shadow: 1px 1px 0px black;
+            color: white;
+            border-radius: 10px;
+        }
+
+
+        .accordion-item {
+            margin-bottom: 10px;
+        }
+        .accordion-header {
+            background-image: linear-gradient(to right, rgb(37,99,235), rgb(59,130,246));
+            color: white;
+            padding: 15px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-header:hover {
+            background-image: linear-gradient(to right, rgb(59,130,246), rgb(37,99,235));
+        }
+        .accordion-content {
+            padding: 15px;
+            background-color: #f8f9fa;
+            display: none;
+            border-left: 2px solid #007bff;
+            border-right: 2px solid #007bff;
+            border-bottom: 2px solid #007bff;
+        }
+        .icon {
+            font-size: 1.5rem;
+                }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            
+            main{
+                margin: auto;
+                width: 90%;
+            }
+
+            header{
+                text-align: center;
+            }
+
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                margin-bottom: 20px;
+            }
+
+            .content h2 {
+                font-size: 1.5rem;
+            }
+
+            
+            #menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 20px;
+            }
+
+            #menu.active {
+                display: flex;
+            }
+            #hamburger {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
