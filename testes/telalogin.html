@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            width: 800px;
+            height: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .login-form {
+            width: 50%;
+            padding: 40px;
+            background: linear-gradient(to bottom, #0099ff, #66ccff);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .login-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .options a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .illustration {
+            background-color: #f9f9f9;
+            width: 50vw;
+            
+        }
+
+        .illustration img {
+            width: 80vw;
+            background-position: right;
+            background-size: cover;
+            background-attachment: fixed;
+            
+            
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h2>WELCOME</h2>
+            <form action="#" method="post">
+                <div class="input-group">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="options">
+                    <label>
+                        <input type="checkbox"> Remember
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+        <div class="illustration">
+            <!-- Aqui vai a ilustração ou imagem -->
+            <img src="bus-img-2.jpg" alt="Login Illustration">
+        </div>
+    </div>
+</body>
+</html>
