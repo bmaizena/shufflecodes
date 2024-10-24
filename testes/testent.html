@@ -18,8 +18,8 @@
             width: 540px;
             border-collapse: collapse;
             margin: auto;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.144);
-            background-color: rgb(255, 239, 234);
+            
+            
             
         }
         caption {
@@ -28,7 +28,7 @@
             padding: 8px;
         }
         th, td {
-            border: 1px solid black;
+            
             padding: 8px;
             text-align: center;
             
@@ -36,12 +36,22 @@
         tr:nth-child(even) {
             background-color: rgb(154, 203, 210);
         }
+
+        tr:nth-child(odd) {
+            background-color: rgb(255, 239, 234);
+        }
+        
+        
         #id {
             background-color: rgb(73, 189, 205);
             height: 25px;
+            border-radius: 10px 0px 0px 0px;
+           
         }
         #nome {
             background-color: rgb(243, 192, 167);
+            border-radius: 0px 10px 0px 0px;
+            
         }
 
         .unsub {
@@ -234,9 +244,9 @@
             <td>officer_sprinklez</td>
         </tr>
 
-        <tr class="unsub">
-            <td>26°</td>
-            <td>UNSUB</td><!--rmzlexi 03/07/2024-->
+        <tr >
+            <td class="unsub">26°</td>
+            <td class="unsub">UNSUB</td><!--rmzlexi 03/07/2024-->
         </tr>
 
 
