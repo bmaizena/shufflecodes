@@ -16,29 +16,54 @@
 
         table {
             width: 90%;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 0;
             margin: auto;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.39);
             margin-bottom: 130px;
             
-
+            background-color: rgb(255, 255, 255);
         }
 
-        #formvac {
+        #formvac tr:nth-child(even) {
             background-color:rgb(185, 224, 159);
         
         }
+        #formvac tr:nth-child(odd){
+            background-color: rgb(198, 226, 179);
+        }
 
-        #subvac {
+        #subvac tr:nth-child(even) {
             background-color: beige;
         }
 
-        #drawvac {
+        #subvac tr:nth-child(odd){
+            background-color: rgb(245, 245, 197);
+        }
+
+        #drawvac tr:nth-child(even) {
             background-color: rgb(224, 169, 159);
         }
 
-        #giveaway{
+        #drawvac tr:nth-child(odd){
+            background-color: rgb(224, 178, 170);
+        }
+
+        #giveaway tr:nth-child(even){
             background-color: rgb(240, 228, 125);
+        }
+
+        #giveaway tr:nth-child(odd){
+            background-color: rgb(245, 236, 153);
+        }
+
+        tr:nth-last-child(1) td:nth-last-child(1) {
+            border-radius: 0px 0px 10px 0px;
+            
+        }
+
+        tr:nth-last-child(1) td:nth-last-child(2) {
+            border-radius: 0px 0px 0px 10px;
+            
         }
        
         caption {
@@ -48,17 +73,19 @@
         }
 
         th, td {
-            border: 1px solid black;
+            
             padding: 8px;
             text-align: center;
         }
 
         #id {
             background-color: chartreuse;
+            border-radius: 10px 0px 0px 0px;
         }
 
         #nome {
             background-color: rgb(48, 164, 218);
+            border-radius: 0px 10px 0px 0px;
         }
 
 
@@ -145,6 +172,7 @@
             <tr>
                 <td>12°</td>
                 <td>channies_room_97💟</td>
+                
             </tr>
            
         </table>
