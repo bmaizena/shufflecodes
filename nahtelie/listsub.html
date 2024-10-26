@@ -34,13 +34,18 @@
             text-align: center;
         }
 
+
+       /*filhos par e impares*/
+
         tr:nth-child(even) {
             background-color: rgb(154, 203, 210);
+            transition: 0.5s;
+            
         }
 
         tr:nth-child(odd) {
             background-color: rgb(255, 239, 234);
-            
+            transition: 0.5s;
         }
 
         tr:nth-last-child(1) td:nth-last-child(1) {
@@ -63,18 +68,96 @@
             border-radius: 0px 10px 0px 0px;
         }
 
-        .unsub {
+
+        /*classes*/
+
+        tr:nth-child(odd) ~ .unsub {
             background-color: rgb(236, 150, 109);
             font-weight: 600;
-    
+            transition: 0.5s;
+        }
+
+        tr:nth-child(even) ~ .unsub {
+            background-color: rgb(236, 150, 109);
+            font-weight: 600;
+            transition: 0.5s;
         }
 
         .confirmed {
             background-color: rgba(0, 128, 0, 0.671);
         }
 
-        .frozen {
+        tr:nth-child(even) ~ .frozen  {
             background-color:rgb(43, 109, 117);
+            transition: 0.5s;
+        }
+
+        tr:nth-child(odd) ~ .frozen  {
+            background-color:rgb(43, 109, 117);
+            transition: 0.5s;
+        }
+
+
+        /*hovers*/
+
+        tr:nth-child(even):hover {
+            background-color: rgb(243, 192, 167);
+            font-weight: bold;
+           
+            transition: 0.3s ease;
+            transform: scale(1.07);
+            
+        }
+
+        tr:nth-child(even):hover td:nth-child(1) {
+            border-radius: 100px 0px 0px 100px;
+            
+        }
+
+        tr:nth-child(even):hover td:nth-child(2) {
+            border-radius: 0px 100px 100px 0px;
+        }
+
+        tr:nth-child(odd):hover {
+            background-color: rgb(243, 192, 167);
+            font-weight: bold;
+            
+            transition: 0.3s ease;
+            transform: scale(1.07);
+            
+        }
+
+        tr:nth-child(odd):hover td:nth-child(1) {
+            border-radius: 100px 0px 0px 100px;
+        }
+
+        tr:nth-child(odd):hover td:nth-child(2) {
+            border-radius: 0px 100px 100px 0px;
+        }
+
+        tr:nth-child(even).frozen:hover {
+            background-color:rgb(31, 78, 83);
+            font-weight: bold;
+            color: aliceblue;
+        }
+
+        tr:nth-child(odd).frozen:hover {
+            background-color:rgb(31, 78, 83);
+            font-weight: bold;
+            color: aliceblue;
+            
+        }
+
+        tr:nth-child(even).unsub:hover {
+            background-color: rgb(240, 130, 80);
+            font-weight: bold;
+            color: aliceblue;
+        }
+
+        tr:nth-child(odd).unsub:hover {
+            background-color: rgb(240, 130, 80);
+            font-weight: bold;
+            color: aliceblue;
         }
 
         @media screen and (min-width: 700px) {
@@ -108,23 +191,23 @@
         </tr>
 
         
-        <tr>
-            <td class="frozen">1°</td>
-            <td class="frozen">midgetjhae</td> 
+        <tr class="frozen">
+            <td>1°</td>
+            <td>midgetjhae</td> 
         </tr>
            
 
 
 
-        <tr>
-            <td class="frozen">2°</td>
-            <td class="frozen">abby.ann.hughes</td>
+        <tr  class="frozen">
+            <td>2°</td>
+            <td>abby.ann.hughes</td>
         </tr>
 
 
-        <tr>
-            <td class="frozen">3°</td>
-            <td class="frozen">minho_knows2</td>    
+        <tr class="frozen">
+            <td>3°</td>
+            <td>minho_knows2</td>    
         </tr>
 
 
@@ -153,9 +236,9 @@
         </tr>
 
 
-        <tr>
-            <td class="unsub">8°</td>
-            <td class="unsub">UNSUB</td> <!--magz_319 01/10/2024-->
+        <tr  class="unsub">
+            <td>8°</td>
+            <td>UNSUB</td> <!--magz_319 01/10/2024-->
         </tr>
         
 
@@ -184,9 +267,9 @@
         </tr>
 
 
-        <tr>
-            <td class="unsub">13°</td>
-            <td class="unsub">UNSUB</td>  <!--hyune.lixie 04/10/2024-->
+        <tr  class="unsub">
+            <td>13°</td>
+            <td>UNSUB</td>  <!--hyune.lixie 04/10/2024-->
         </tr>
 
 
@@ -243,9 +326,9 @@
             <td>aline_lndi</td> 
         </tr>
 
-        <tr>
-            <td class="unsub">23°</td>
-            <td class="unsub">UNSUB</td> <!--space.candi 12/10/2024-->
+        <tr class="unsub">
+            <td>23°</td>
+            <td>UNSUB</td> <!--space.candi 12/10/2024-->
         </tr>
 
 
@@ -294,9 +377,9 @@
            
 
 
-        <tr>
-            <td class="unsub">31°</td>
-            <td class="unsub">UNSUB</td> <!--mynameiiiis 19/08/2024--> <!--mynameiiiis 23/10/2024-->
+        <tr class="unsub">
+            <td>31°</td>
+            <td>UNSUB</td> <!--mynameiiiis 19/08/2024--> <!--mynameiiiis 23/10/2024-->
         </tr>
         
 
@@ -409,9 +492,9 @@
             <td>izzy_rae</td>
         </tr>
 
-        <tr>
-            <td  class="unsub">50°</td>
-            <td  class="unsub">UNSUB</td> <!--solea_aboney 18/09/2024-->
+        <tr class="unsub">
+            <td>50°</td>
+            <td>UNSUB</td> <!--solea_aboney 18/09/2024-->
         </tr>
 
 
@@ -748,9 +831,9 @@
             <td>rayneshwrs</td> 
         </tr>
 
-        <tr>
-            <td class="unsub">112°</td>
-            <td class="unsub">UNSUB</td> <!--allisontemplebooks 15/10/2024-->
+        <tr class="unsub">
+            <td>112°</td>
+            <td>UNSUB</td> <!--allisontemplebooks 15/10/2024-->
         </tr>
 
         <tr>
@@ -764,9 +847,9 @@
         </tr>
 
 
-        <tr>
-            <td  class="unsub">115°</td>
-            <td  class="unsub">UNSUB</td> <!--amanakkeli 18/09/2024-->
+        <tr class="unsub">
+            <td>115°</td>
+            <td>UNSUB</td> <!--amanakkeli 18/09/2024-->
         </tr>
 
 
@@ -791,9 +874,9 @@
             <td>youlittlejerk13</td> 
         </tr>
 
-        <tr>
-            <td class="unsub">120°</td>
-            <td class="unsub">UNSUB</td> <!--ceciliakrystyne 25/09/2024-->
+        <tr class="unsub">
+            <td>120°</td>
+            <td>UNSUB</td> <!--ceciliakrystyne 25/09/2024-->
         </tr>
 
         <tr>
@@ -811,9 +894,9 @@
             <td>shellseyceleste</td>
         </tr>
 
-        <tr>
-            <td  class="unsub">124°</td>
-            <td  class="unsub">UNSUB</td><!--cherryhyunin 30/09/2024-->
+        <tr class="unsub">
+            <td>124°</td>
+            <td>UNSUB</td><!--cherryhyunin 30/09/2024-->
         </tr>
 
         <tr>
@@ -896,9 +979,9 @@
             <td>evie0928</td>
         </tr>
 
-        <tr>
-            <td class="unsub">141°</td>
-            <td class="unsub">UNSUB</td> <!--alexia_hood 21/10/2024-->
+        <tr class="unsub">
+            <td>141°</td>
+            <td>UNSUB</td> <!--alexia_hood 21/10/2024-->
         </tr>
 
         <tr>
