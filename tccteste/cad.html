@@ -14,6 +14,12 @@
             padding: 0;
             font-family: "Montserrat", sans-serif;
         }
+        
+
+        #imagem:hover {
+            transition: 0.3s ease;
+            transform: scale(1.05);
+        }
         @media screen and (min-width: 0px) and (max-width:650px) {
     #mainCad{
         width: 450px;
@@ -31,9 +37,13 @@
     }
     #imagem{
         width: 385px;
-        transition: width 0.2s, height 0.2s;
-        transition-timing-function: ease-in-out;
+        transition: 0.5s;
         
+    }
+
+    #imagem:hover {
+        transition: 0.3s ease;
+        transform: scale(1.05);
     }
     
 }
@@ -59,8 +69,8 @@
         <h1 class="font-thin text-6xl text-slate-50 ml-3">BUS.IO</h1>
         <p class="font-thin text-lg text-slate-50 ml-1">Seu ônibus na palma da sua mão</p>
     </div>
-    <div id="imagem"class="absolute top-12 left-12">
-        <img src="bus.io.png" alt="bus" class="w-10/12 ml-1 mt-2">
+    <div id="imagem"class="absolute top-12 left-12 transition-all">
+        <img src="bus.io.png" alt="bus" class="w-10/12 ml-1 mt-2 ">
     </div>
     
 
@@ -89,7 +99,7 @@
         <input type="password" name="senha" id="senha" placeholder="Senha" class="m-1 p-1 rounded-lg border border-zinc-500 w-4/6 self-center">
     
     
-        <input type="Submit" value="Cadastrar" class="border border-zinc-800 shadow-md rounded-lg p-1 mb-0 m-1 cursor-pointer bg-gradient-to-r from-blue-400 to-cyan-400 hover:from-cyan-400 hover:to-blue-400  hover:text-slate-50 transition duration-300 delay-150 hover:delay-300 w-1/2 self-center" >
+        <input type="Submit" value="Cadastrar" class="border border-zinc-800 shadow-md rounded-lg p-1 mb-0 m-1 cursor-pointer bg-gradient-to-r from-blue-400 to-cyan-400  hover:text-slate-50 transition duration-300 w-1/2 self-center hover:scale-105 transform-gpu" >
         <p class="self-center">ja tem uma conta? <a href="index.html" class=" hover:text-cyan-500"><b>Entrar</b></a></p> 
         <br>
         <p class="self-center pb-2 hover:text-cyan-500"><a href="index.html"><b>Página Inicial</b></a></p>
