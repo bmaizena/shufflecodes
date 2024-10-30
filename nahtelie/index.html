@@ -166,6 +166,43 @@
             color: aliceblue;
         }
 
+         /*unsubs abreviações*/
+
+         abbr {
+            text-decoration: none;
+        }
+
+        abbr:hover::after {
+            content: attr(title); /* Pega o conteúdo do atributo title */
+            position: absolute;
+            bottom: 100%;
+            left: 58%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 20px;
+            white-space: nowrap;
+            font-size: 14px;
+            margin-bottom: 5px;
+            
+
+        }
+        abbr:hover::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 58%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #333 transparent;
+            margin-bottom: -5px;
+           
+       }
+        
+
+
         @media screen and (min-width: 700px) {
             table {
                 max-width: 550px;
@@ -427,7 +464,7 @@
 
         <tr class="unsub">
             <td>47°</td>
-            <td>UNSUB</td> <!--space.candi 12/10/2024-->
+            <td><abbr title="space.candi">UNSUB</abbr></td> <!--space.candi 12/10/2024-->
         </tr>
 
         <tr>
@@ -487,7 +524,7 @@
 
         <tr class="unsub">
             <td>59°</td>
-            <td>UNSUB</td> <!--pierwiosnkaa 15/10/2024-->
+            <td><abbr title="pierwiosnkaa">UNSUB</abbr></td> <!--pierwiosnkaa 15/10/2024-->
         </tr>
 
         <tr>
@@ -902,7 +939,7 @@
 
         <tr class="unsub">
             <td>142°</td>
-            <td>UNSUB</td> <!--lesleeatthedisco 30/10/2024-->
+            <td><abbr title="lesleeatthedisco">UNSUB</abbr></td> <!--lesleeatthedisco 30/10/2024-->
         </tr>
 
         <tr>
@@ -972,7 +1009,7 @@
 
         <tr class="unsub">
             <td>156°</td>
-            <td>UNSUB</td> <!--allisontemplebooks 15/10/2024-->
+            <td><abbr title="allisontemplebooks">UNSUB</abbr></td> <!--allisontemplebooks 15/10/2024-->
         </tr>
 
         <tr>
@@ -1087,7 +1124,7 @@
 
         <tr class="unsub">
             <td>179°</td>
-            <td>UNSUB</td> <!--mynameiiiis 23/10/2024-->
+            <td><abbr title="mynameiiiis">UNSUB</abbr></td> <!--mynameiiiis 23/10/2024-->
         </tr>
 
         <tr>
@@ -1152,7 +1189,7 @@
 
         <tr class="unsub">
             <td>192°</td>
-            <td>UNSUB</td> <!--alexia_hood 21/10/2024-->
+            <td><abbr title="alexia_hood">UNSUB</abbr></td> <!--alexia_hood 21/10/2024-->
         </tr>
 
         <tr>
