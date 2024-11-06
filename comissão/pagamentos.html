@@ -29,7 +29,7 @@
             padding: 8px;
         }
         th, td {
-            border: 1px solid black;
+            border: 1px solid rgba(0, 2, 2, 0.459);
             padding: 8px;
             text-align: center;
             
@@ -47,7 +47,7 @@
             background-color: rgb(204, 94, 75);
         } 
 
-        #total {
+        #total, #desc {
             font-size: 1.3em;
             background-color:rgb(48, 164, 218);
         }
@@ -69,6 +69,15 @@
 
         #fim{
             height: 60px;
+        }
+
+        #gastos{
+            height: 60px;
+        }
+
+        #valorGasto {
+            font-size: 1.3em;
+            background-color: rgba(236, 141, 141, 0.87);
         }
 
         
@@ -453,6 +462,32 @@
             <td colspan="9" id="total">TOTAL ARRECADADO</td>
             <td colspan="1" id="valor">R$840,00</td>
         </tr>
+
+    </table>
+    
+    <br><br>
+
+    <table>
+        <caption>GASTOS</caption>
+       
+    
+        <tr id="gastos">
+            <td id="desc">DESCRIÇÃO</td>
+            <td id="valorGasto">VALOR</td>
+            <td id="valor">TOTAL</td>
+        </tr>
+
+        <tr>
+            <td>Bolo e doces (entrada)</td>
+            <td>R$200,00</td>
+            <td rowspan="2" style="background-color: rgba(209, 248, 209, 0.452);" id="valor">R$560,00</td>
+        </tr>
+
+        <tr>
+            <td>Enfeites de Mesa</td>
+            <td>R$80,00</td>
+        </tr>
+        
 
 
     </table>
