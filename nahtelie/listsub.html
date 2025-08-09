@@ -36,6 +36,16 @@
             text-align: center;
         }
 
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 10px auto;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 0.5em;
+            transition: border-color 0.3s ease;
+        }
+
 
        /*filhos par e impares*/
 
@@ -214,7 +224,7 @@
     </style>
 </head>
 <body>
-    <table>
+    <table id="subTable">
         
         <caption>Waiting List</caption>
         <caption style="font-size: 15px;">
@@ -223,6 +233,9 @@
         <caption style="font-size: 15px;">
             *subs who unsub, before being removed from the list, have a period of 25 days to become sub again to remain in your current position, if this period ends and you sub again after 25 days, will return at the end of the list*
         </caption>
+
+        <caption><input type="text" name="Search ID" id="search" placeholder="Search ID"></caption>
+
         <caption style="font-size: 15px; text-align: left;">
             <img src="imagens/unsub.png" style="width: 15px;" alt=""> UNSUBS(unsubscribed)<br>
             <img src="imagens/frozen.png" style="width: 15px;" alt=""> FROZEN(didn't want the vacancy or didn't respond)
@@ -1207,5 +1220,24 @@
     </table>
 </body>
 </html>
+
+<script>
+document.getElementById("search").addEventListener("input", function () {
+    const searchValue = this.value.toLowerCase().trim();
+    const rows = document.querySelectorAll("#subTable tr");
+
+    rows.forEach(row => row.style.backgroundColor = ""); // limpa destaque anterior
+
+    if (searchValue) {
+        rows.forEach(row => {
+            const cell = row.cells[1]; // coluna com nome
+            if (cell && cell.textContent.toLowerCase().includes(searchValue)) {
+                row.style.backgroundColor = "yellow"; // destaca
+                row.scrollIntoView({ behavior: "smooth", block: "center" }); // rola até ele
+            }
+        });
+    }
+});
+</script>
 
 
