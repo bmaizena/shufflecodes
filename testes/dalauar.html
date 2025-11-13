@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dǎ Lǎo’èr - Big Two</title>
+  <style>
+    body {
+      background: #0b6623;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #mesa, #mao-jogador {
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .carta {
+      width: 60px;
+      height: 90px;
+      background: white;
+      color: black;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+      user-select: none;
+    }
+
+    .carta:hover {
+      transform: translateY(-8px);
+    }
+
+    .selecionada {
+      transform: translateY(-20px);
+      box-shadow: 0 0 10px yellow;
+    }
+
+    #btn-jogar {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #ffcc00;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #btn-jogar:hover {
+      background: #ffe766;
+    }
+  </style>
+</head>
+<body>
+  <h1>🃏 打老二 (Dǎ Lǎo’èr) - Big Two</h1>
+  <div id="mesa">
+    <h3>Jogada atual:</h3>
+    <div id="jogada-atual"></div>
+  </div>
+
+  <h3>Sua mão:</h3>
+  <div id="mao-jogador"></div>
+
+  <button id="btn-jogar">Jogar</button>
+
+  <script>
+    const naipes = ["♠", "♥", "♣", "♦"];
+    const valores = ["3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A", "2"];
+
+    // cria o baralho
+    let baralho = [];
+    naipes.forEach(n => {
+      valores.forEach(v => {
+        baralho.push({ valor: v, naipe: n });
+      });
+    });
+
+    // embaralha
+    baralho.sort(() => Math.random() - 0.5);
+
+    // distribui 13 cartas
+    const maoJogador = baralho.slice(0, 13);
+    const maoDiv = document.getElementById("mao-jogador");
+    const jogadaAtual = document.getElementById("jogada-atual");
+
+    // mostra as cartas
+    maoJogador.forEach((carta, i) => {
+      const el = document.createElement("div");
+      el.classList.add("carta");
+      el.innerText = carta.valor + carta.naipe;
+
+      // seleciona/deseleciona carta
+      el.addEventListener("click", () => {
+        el.classList.toggle("selecionada");
+      });
+
+      maoDiv.appendChild(el);
+    });
+
+    // botão "jogar"
+    document.getElementById("btn-jogar").addEventListener("click", () => {
+      const selecionadas = document.querySelectorAll(".carta.selecionada");
+      if (selecionadas.length === 0) {
+        alert("Selecione pelo menos uma carta para jogar!");
+        return;
+      }
+
+      // mostra as cartas jogadas na mesa
+      jogadaAtual.innerHTML = "";
+      selecionadas.forEach(c => {
+        const clone = c.cloneNode(true);
+        clone.classList.remove("selecionada");
+        jogadaAtual.appendChild(clone);
+        c.remove(); // remove da mão
+      });
+    });
+  </script>
+</body>
+</html>
